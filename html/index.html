@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <title>WEB1 - Welcome</title>
+  <meta charset="utf-8">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/colors.js"></script>
+  <script src="js/fetchFunction.js"></script>
+  <script src="js/hash.js"></script>
+  <script stc="js/main.js"></script>
+  <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+
+  <h1><a href="/">WEB</a></h1>
+
+  <form action="#" accept-charset="utf-8" name="person_info" method="post">
+    <fieldset style="width:150">
+      <legend>신청자 정보 입력</legend>
+
+        이름 : <input type="text" name="name" required><br><br>
+
+        전화번호 : <input type="text" name="security_number"
+                  pattern="\d{3}-\d{4}-\d{4}"
+                  title="123-1234-1234 형식으로 입력해주세요"><br><br>
+
+        아이디 : <input type="text" name="id"><br><br>
+
+        패스워드 : <input type="text" name="password"><br><br>
+
+        성별 : 남<input type = "radio" name = "gender" />
+               여<input type = "radio" name = "gender" /><br><br>
+
+        관심사 : 연예<input type = "checkbox" name = "checkbox1" />
+                스포츠<input type = "checkbox" name = "checkbox2" />
+                IT<input type = "checkbox" name = "checkbox3" /><br><br>
+
+        <input type = "submit" value = "submit"/>
+
+    </fieldset>
+
+  </form>
+
+</body>
+</html>
