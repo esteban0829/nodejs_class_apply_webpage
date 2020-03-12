@@ -2,7 +2,7 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 var path = require('path');
-var querystring = require('querystring');
+var qs = require('querystring');
 
 
 http.createServer(function (req, res) {
@@ -20,29 +20,31 @@ http.createServer(function (req, res) {
   //   console.log('favicon requested');
   // }
 
-  console.log(_url);
-  console.log(pathname);
-  console.log(querydata);
-  console.log(querystring.parse(querydata));
-  console.log(querystring.parse(querydata).id);
-  console.log('--------------------');
+  // console.log(_url);
+  // console.log(pathname);
+  // console.log(querydata);
+  // console.log(querystring.parse(querydata));
+  // console.log(querystring.parse(querydata).id);
+  // console.log('--------------------');
 
   if(pathname === '/'){
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.end('main website');
 
+  }else if(pathname === '/apply_class'){
     fs.readFile('./html/index.html', function(err, html){
       if(err) throw error;
       res.writeHeader(200, {'Content-Type' : 'text/html'});
       res.write(html);
       res.end();
     });
-    // res.writeHead(200, {'Content-Type': 'text/plain'});
-    // res.end('main website');
-  }else if(pathname === '/apply_class'){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('apply_class');
-  }else if(pathname === '/apply_class_process'){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('apply_class_process');
+
+  }else if(pathname === '/apply_class_process' && req.method=='POST'){
+    collectRequestData(req, result => {
+      console.log(result);
+      res.end(`Parsed data belonging to ${result.fname}`);
+    });
+
   }else{
     res.writeHead(404, {'Content-Type': 'text/plain'});
     res.end('404 NOT FOUND');
@@ -50,3 +52,21 @@ http.createServer(function (req, res) {
 
 
 }).listen(8081);
+
+
+
+function collectRequestData(request, callback) {
+    const FORM_URLENCODED = 'application/x-www-form-urlencoded';
+    if(request.headers['content-type'] === FORM_URLENCODED) {
+        let body = '';
+        request.on('data', chunk => {
+            body += chunk.toString();
+        });
+        request.on('end', () => {
+            callback(qs.parse(body));
+        });
+    }
+    else {
+        callback(null);
+    }
+}
