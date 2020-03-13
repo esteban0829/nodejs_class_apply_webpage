@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <title>루소의 숲 신청페이지</title>
+  <meta charset="utf-8">
+</head>
+<body>
+
+  <!-- <form action="/apply_class_process" method="post">
+    <input type="text" name="fname"><br>
+    <input type="number" name="age"><br>
+    <input type="file" name="photo"><br>
+    <button>Save</button>
+  <form> -->
+
+  <!-- <form action="/apply_class_process" accept-charset="utf-8" name="person_info" method="post">
+    <fieldset style="width:150">
+      <legend>신청자 정보 입력</legend>
+
+        이름 :
+        <input type="text" name="person_name" placeholder="ex) 홍길동"required><br><br>
+
+        전화번호 :
+        <input type="text" name="security_number" pattern="\d{3}-\d{4}-\d{4}" title="123-1234-1234 형식으로 입력해주세요" placeholder="ex) 000-0000-000"required><br><br>
+
+        아이디 :
+        <input type="text" name="id" required><br><br>
+
+        패스워드 :
+        <input type="text" name="password" required><br><br>
+
+        성별 : 남
+        <input type = "radio" name = "gender" />
+        여
+        <input type = "radio" name = "gender" /><br><br>
+
+        관심사 : 연예
+        <input type = "checkbox" name = "checkbox1" />
+        스포츠
+        <input type = "checkbox" name = "checkbox2" />
+        IT
+        <input type = "checkbox" name = "checkbox3" /><br><br>
+
+        지역선택 (size, multiple속성 추가)<br>
+        <select name = "city2" size="5" multiple>
+          <option value = "seongnam-si">성남시</option>
+          <option value = "suwon-si">수원시</option>
+          <option value = "yongin-si">용인시</option>
+          <option value = "anyang-si">안양시</option>
+          <option value = "gwacheon-si">과천시</option>
+          <option value = "hanam-si">과천시</option>
+        </select>
+        <br><br>
+
+        지역선택 (optgroup 태그 포함)<br>
+        <select name = "city1" optgroup>
+          <optgroup label = "서울">
+            <option value = "songpa-gu">송파구</option>
+            <option value = "gangnam-gu">강남구</option>
+            <option value = "seocho-gu">서초구</option>
+            <option value = "junggu-gu">중구</option>
+          </optgroup>
+
+          <optgroup label = "경기도">
+            <option value = "seongnam-si">성남시</option>
+            <option value = "suwon-si">수원시</option>
+            <option value = "yongin-si">용인시</option>
+            <option value = "anyang-si">안양시</option>
+          </optgroup>
+        </select>
+        <br><br>
+
+      가입 인사 <br>
+      <textarea name = "comment" cols = "50" rows = "5" placeholder="가입인사를 남겨주세요."></textarea>
+      <br><br>
+
+      자주 사용하는 웹 브라우저를 입력해주세요.<br>
+      <input type="text" name="browser" list="browser">
+      <datalist id="browser">
+        <option value = "크롬">Google</option>
+        <option value = "파이어폭스">Mozilla</option>
+        <option value = "사라피">Apple</option>
+        <option value = "익스플로러">MicroSoft</option>
+      </datalist>
+      <br><br>
+
+      원하는 날짜를 입력해주세요.<br>
+      <input type="date" min="1999-1-1" max="2020-12-30" name="date"><br><br>
+
+      원하는 숫자를 입력해주세요.<br>
+      숫자 : <input type="number" min="0" max="99" name="number"><br><br>
+
+      원하는 숫자를 입력해주세요.<br>
+      숫자 :<input type="range" min="0" max="99" name="range"><br><br>
+
+      원하는 색깔을 선택해주세요.<br>
+      색깔 :<input type="color" name="color"><br><br>
+
+      <input type = "submit" value = "submit"/>
+      <input type = "reset" value = "reset"/><br><br> -->
+
+      <form action="/apply_class_process" method="post">
+        이름 : <input type="text" name="fname" required><br><br>
+        전화번호 : <input type="text" name="mobile_number" pattern="\d{3}-\d{4}-\d{4}" title="123-1234-1234 형식으로 입력해주세요" placeholder="ex) 000-0000-000"required><br><br>
+        지역선택 (optgroup 태그 포함) :
+        <select name = "수업신청" optgroup>
+          <optgroup label = "0~5세">
+            <option value = "class1">수업1</option>
+            <option value = "class2">수업2</option>
+            <option value = "class3">수업3</option>
+            <option value = "class4">수업4</option>
+          </optgroup>
+
+          <optgroup label = "7~12세">
+            <option value = "class1">수업1</option>
+            <option value = "class2">수업2</option>
+            <option value = "class3">수업3</option>
+            <option value = "class4">수업4</option>
+          </optgroup>
+        </select><br><br>
+        <input type="submit" value="Submit">
+      <form>
+
+
+
+    </fieldset>
+
+  </form>
+
+</body>
+</html>

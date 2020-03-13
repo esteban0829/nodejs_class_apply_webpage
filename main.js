@@ -11,14 +11,14 @@ http.createServer(function (req, res) {
   var pathname = url.parse(req.url).pathname;
   var querydata = url.parse(req.url).query;
 
-  // if (req.url === '/favicon.ico') {
-  //   fs.readFile('./image/favicon.ico', function(err, favicon){
-  //     res.writeHeader(200, {'Content-Type': 'image/x-icon'} );
-  //     res.write(favicon);
-  //     res.end();
-  //   });
-  //   console.log('favicon requested');
-  // }
+  if (req.url === '/favicon.ico') {
+    fs.readFile('./image/favicon.ico', function(err, favicon){
+      res.writeHeader(200, {'Content-Type': 'image/x-icon'} );
+      res.write(favicon);
+      res.end();
+    });
+    console.log('favicon requested');
+  }
 
   // console.log(_url);
   // console.log(pathname);
@@ -28,11 +28,14 @@ http.createServer(function (req, res) {
   // console.log('--------------------');
 
   if(pathname === '/'){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('main website');
+    fs.readFile('./html/index.html', function(err, html){
+      if(err) throw err;
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.end(html);
+    });
 
   }else if(pathname === '/apply_class'){
-    fs.readFile('./html/index.html', function(err, html){
+    fs.readFile('./html/apply.html', function(err, html){
       if(err) throw error;
       res.writeHeader(200, {'Content-Type' : 'text/html'});
       res.write(html);
@@ -42,7 +45,10 @@ http.createServer(function (req, res) {
   }else if(pathname === '/apply_class_process' && req.method=='POST'){
     collectRequestData(req, result => {
       console.log(result);
-      res.end(`Parsed data belonging to ${result.fname}`);
+      console.log(result.fname);
+      console.log(result.mobile_number);
+      console.log(result.수업신청);
+      res.end('apply confirmed');
     });
 
   }else{
