@@ -45,9 +45,9 @@ http.createServer(function (req, res) {
   }else if(pathname === '/apply_class_process' && req.method=='POST'){
     collectRequestData(req, result => {
       console.log(result);
-      console.log(result.fname);
-      console.log(result.mobile_number);
-      console.log(result.수업신청);
+      // console.log(result.fname);
+      // console.log(result.mobile_number);
+      // console.log(result.수업신청);
       res.end('apply confirmed');
     });
 
