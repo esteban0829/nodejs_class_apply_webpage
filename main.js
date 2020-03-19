@@ -11,14 +11,6 @@ http.createServer(function (req, res) {
   var pathname = url.parse(req.url).pathname;
   var querydata = url.parse(req.url).query;
 
-  if (req.url === '/favicon.ico') {
-    fs.readFile('./image/favicon.ico', function(err, favicon){
-      res.writeHeader(200, {'Content-Type': 'image/x-icon'} );
-      res.write(favicon);
-      res.end();
-    });
-    console.log('favicon requested');
-  }
 
   // console.log(_url);
   // console.log(pathname);
