@@ -12,12 +12,12 @@ http.createServer(function (req, res) {
   var pathname = url.parse(req.url).pathname;
   var querydata = url.parse(req.url).query;
 
-  // console.log(_url);
-  // console.log(pathname);
-  // console.log(querydata);
-  // console.log(querystring.parse(querydata));
-  // console.log(querystring.parse(querydata).id);
-  // console.log('--------------------');
+  console.log(_url);
+  console.log(pathname);
+  console.log(querydata);
+  console.log(querystring.parse(querydata));
+  console.log(querystring.parse(querydata).id);
+  console.log('--------------------');
 
   if(pathname === '/'){
     fs.readFile('./html/index.html', function(err, html){
@@ -37,9 +37,6 @@ http.createServer(function (req, res) {
   }else if(pathname === '/apply_class_process' && req.method=='POST'){
     collectRequestData(req, result => {
       console.log(result);
-      // console.log(result.fname);
-      // console.log(result.mobile_number);
-      // console.log(result.수업신청);
       res.end('apply confirmed');
     });
 
@@ -50,21 +47,3 @@ http.createServer(function (req, res) {
 
 
 }).listen(8081);
-
-
-
-function collectRequestData(request, callback) {
-    const FORM_URLENCODED = 'application/x-www-form-urlencoded';
-    if(request.headers['content-type'] === FORM_URLENCODED) {
-        let body = '';
-        request.on('data', chunk => {
-            body += chunk.toString();
-        });
-        request.on('end', () => {
-            callback(qs.parse(body));
-        });
-    }
-    else {
-        callback(null);
-    }
-}
