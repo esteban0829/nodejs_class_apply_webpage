@@ -6,7 +6,7 @@ var qs = require('querystring');
 var db = require('./lib/db.js');
 
 
-http.createServer(function (req, res) {
+var app = http.createServer(function (req, res) {
 
   var _url = req.url;
   var pathname = url.parse(req.url).pathname;
@@ -56,4 +56,6 @@ http.createServer(function (req, res) {
   }
 
 
-}).listen(8081);
+});
+
+app.listen(8081);
