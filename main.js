@@ -35,8 +35,7 @@ http.createServer(function (req, res) {
     fs.readFile('./html/form.html', function(err, html){
       if(err) throw error;
       res.writeHeader(200, {'Content-Type' : 'text/html'});
-      res.write(html);
-      res.end();
+      res.end(html);
     });
 
   }else if(pathname === '/apply_class_process' && req.method=='POST'){
