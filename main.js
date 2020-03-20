@@ -44,35 +44,6 @@ var app = http.createServer(function (req, res) {
     res.end('404 NOT FOUND');
   }
 
-  // console.log(path.extname(pathname));
-  // if(path.extname(pathname) === '.css'){
-  //   var dir = './front-end' + pathname;
-  //   fs.readFile(dir, 'utf-8', function (err, data) {
-  //     console.log(data);
-  //     if (err) throw (err);
-  //     res.writeHead(200, {'Content-Type': 'text/css'});
-  //     res.write(data);
-  //     res.end();
-  //   });
-  // }else if(path.extname(pathname) === '.js'){
-  //   var dir = './front-end' + pathname;
-  //   fs.readFile(dir, function (err, data) {
-  //     if (err) throw (err);
-  //     res.writeHead(200, {'Content-Type': 'text/javascript'});
-  //     res.write(data);
-  //     res.end();
-  //   });
-  // }else if(path.extname(pathname) === '.jpg'){
-  //   var dir = './front-end' + pathname;
-  //   fs.readFile(dir, function (err, data) {
-  //     if (err) throw (err);
-  //     res.writeHead(200, {'Content-Type': 'text/image'});
-  //     res.write(data);
-  //     res.end();
-  //   });
-  // }
-
-
 });
 
 app.listen(8081);
