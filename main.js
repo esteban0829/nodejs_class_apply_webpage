@@ -13,7 +13,6 @@ var app = http.createServer(function (req, res) {
   var pathname = url.parse(req.url).pathname;
   var querydata = url.parse(req.url).query;
 
-
   console.log(`_url : ${_url}`);
   console.log(`pathanme : ${pathname}`);
   console.log(`querydata : ${querydata}`);
