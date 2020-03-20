@@ -2,53 +2,47 @@ var http = require('http');
 var url = require('url');
 var fs = require('fs');
 var path = require('path');
-var qs = require('querystring');
+// var qs = require('querystring');
 var db = require('./lib/db.js');
+var template = require('./lib/template.js')
 
 
-http.createServer(function (req, res) {
+var app = http.createServer(function (req, res) {
 
   var _url = req.url;
   var pathname = url.parse(req.url).pathname;
   var querydata = url.parse(req.url).query;
-
 
   console.log(`_url : ${_url}`);
   console.log(`pathanme : ${pathname}`);
   console.log(`querydata : ${querydata}`);
 
   if(pathname === '/'){
-    fs.readFile('./html/index.html', function(err, html){
-      if(err) throw err;
-      res.writeHead(200, {'Content-Type': 'text/html'});
-      res.end(html);
-    });
-
-  if(pathname === '/master.css'){
-    fs.readFile('./css/master.css', function(err, css){
-      if(err) throw err;
-      res.writeHead(200, {'Content-Type': 'text/css'});
-      res.end(css);
-    });
+    template.main(req,res);
 
   }else if(pathname === '/apply_class'){
-    fs.readFile('./html/apply.html', function(err, html){
-      if(err) throw error;
-      res.writeHeader(200, {'Content-Type' : 'text/html'});
-      res.write(html);
-      res.end();
-    });
+    template.apply(req,res);
 
   }else if(pathname === '/apply_class_process' && req.method=='POST'){
-    collectRequestData(req, result => {
-      console.log(result);
-      res.end('apply confirmed');
-    });
+    template.apply_class_process(req,res);
+
+  }else if(req.url.match("\.css$")){
+    var cssPath = path.join(__dirname, 'front-end', req.url);
+    var fileStream = fs.createReadStream(cssPath, "UTF-8");
+    res.writeHead(200, {"Content-Type": "text/css"});
+    fileStream.pipe(res);
+
+  }else if(req.url.match("\.jpg$")){
+    var imagePath = path.join(__dirname, 'front-end', req.url);
+    var fileStream = fs.createReadStream(imagePath);
+    res.writeHead(200, {"Content-Type": "image/jp g"});
+    fileStream.pipe(res);
 
   }else{
     res.writeHead(404);
     res.end('404 NOT FOUND');
   }
 
+});
 
-}).listen(8081);
+app.listen(8081);

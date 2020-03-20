@@ -1,0 +1,22 @@
+.body-container {
+    margin-right: 10rem;
+    margin-left: 10rem;
+    background-color: white;
+    min-height: 50rem;
+}
+.project-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1550px){
+    .project-container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+@media screen and (max-width: 1200px){
+    .body-container{
+    margin: 0rem;
+    }
+}
