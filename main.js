@@ -24,8 +24,8 @@ http.createServer(function (req, res) {
       res.end(html);
     });
 
-  }else if(pathname === '/master.css'){
-    fs.readFile('./css/master.css', function(err, css){
+  }else if(pathname === '/css/master.css'){
+    fs.readFile(`${__dirname}/${pathname}`, function(err, css){
       if(err) throw err;
       res.writeHead(200, {'Content-Type': 'text/css'});
       res.end(css);
@@ -41,14 +41,14 @@ http.createServer(function (req, res) {
 
   }else if(pathname === '/apply_class_process' && req.method=='POST'){
     var body='';
-    request.on('data', function(data){//gives the data to the body which we got from the method post
+    req.on('data', function(data){//gives the data to the body which we got from the method post
       body+=data;
     });
-    request.on('end', function(){//write a new file that has the name as title and file data as description
-    var post = qs.parse(body);
-    // [post.title, post.description, post.author],
-    response.writeHead(302, {Location:`/`});
-    response.end();
+    req.on('end', function(){//write a new file that has the name as title and file data as description
+    // var post = qs.parse(body);
+    console.log(body);
+    res.writeHead(302, {Location:`/`});
+    res.end();
   });
 
   }else{
