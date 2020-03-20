@@ -33,13 +33,13 @@ var app = http.createServer(function (req, res) {
     res.writeHead(200, {"Content-Type": "text/css"});
     fileStream.pipe(res);
 
-    }else if(req.url.match("\.jpg$")){
+  }else if(req.url.match("\.jpg$")){
     var imagePath = path.join(__dirname, 'front-end', req.url);
     var fileStream = fs.createReadStream(imagePath);
     res.writeHead(200, {"Content-Type": "image/jp g"});
     fileStream.pipe(res);
 
-    }else{
+  }else{
     res.writeHead(404);
     res.end('404 NOT FOUND');
   }
