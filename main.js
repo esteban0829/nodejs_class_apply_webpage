@@ -47,7 +47,7 @@ http.createServer(function (req, res) {
     request.on('end', function(){//write a new file that has the name as title and file data as description
     var post = qs.parse(body);
     // [post.title, post.description, post.author],
-    response.writeHead(302, {Location:`/?id=${result.insertId}`});
+    response.writeHead(302, {Location:`/`});
     response.end();
   });
 
