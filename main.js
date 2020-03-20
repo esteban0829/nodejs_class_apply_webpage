@@ -20,14 +20,14 @@ http.createServer(function (req, res) {
   console.log('--------------------');
 
   if(pathname === '/'){
-    fs.readFile('./html/index.html', function(err, html){
+    fs.readFile('./front-end/index.html', function(err, html){
       if(err) throw err;
       res.writeHead(200, {'Content-Type': 'text/html'});
       res.end(html);
     });
 
   }else if(pathname === '/apply_class'){
-    fs.readFile('./html/apply.html', function(err, html){
+    fs.readFile('./front-end/apply.html', function(err, html){
       if(err) throw error;
       res.writeHeader(200, {'Content-Type' : 'text/html'});
       res.write(html);
