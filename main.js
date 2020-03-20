@@ -1,9 +1,10 @@
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
-var path = require('path');
-var qs = require('querystring');
+// var path = require('path');
+// var qs = require('querystring');
 var db = require('./lib/db.js');
+var template = require('./lib/template.js')
 
 
 var app = http.createServer(function (req, res) {
@@ -18,38 +19,11 @@ var app = http.createServer(function (req, res) {
   console.log(`querydata : ${querydata}`);
 
   if(pathname === '/'){
-    fs.readFile('./html/index.html', function(err, html){
-      if(err) throw err;
-      res.writeHead(200, {'Content-Type': 'text/html'});
-      res.end(html);
-    });
-
-  }else if(pathname === '/css/master.css'){
-    fs.readFile(`${__dirname}/${pathname}`, function(err, css){
-      if(err) throw err;
-      res.writeHead(200, {'Content-Type': 'text/css'});
-      res.end(css);
-    });
-
+    template.main(req,res);
   }else if(pathname === '/apply_class'){
-    fs.readFile('./html/form.html', function(err, html){
-      if(err) throw error;
-      res.writeHeader(200, {'Content-Type' : 'text/html'});
-      res.end(html);
-    });
-
+    template.apply(req,res);
   }else if(pathname === '/apply_class_process' && req.method=='POST'){
-    var body='';
-    req.on('data', function(data){//gives the data to the body which we got from the method post
-      body+=data;
-    });
-    req.on('end', function(){//write a new file that has the name as title and file data as description
-    // var post = qs.parse(body);
-    console.log(body);
-    res.writeHead(302, {Location:`/`});
-    res.end();
-  });
-
+    template.apply_class_process(req,res);
   }else{
     res.writeHead(404);
     res.end('404 NOT FOUND');

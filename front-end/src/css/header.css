@@ -1,0 +1,64 @@
+.header-container {
+    display: flex;
+    padding: 13rem 8rem 26rem;
+    font-size: 2em;
+    max-height: 18rem;
+    background-image: url("../img/balloon.jpg");
+    background-size: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header-titles {
+    flex: 2;
+    text-align: center;
+    color: white;
+}
+
+.header-titles h4 {
+    opacity: 60%;
+}
+.button-container{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.button-container button{
+    border: none;
+    background-color: #303761;
+    color: white;
+    height: 50px;
+    width: 150px;
+}
+
+@media screen and (max-width: 1200px){
+    .header-container{
+        max-height: 6rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .header-container{
+        margin: 0em 0em 0em;
+    }
+    .header-titles h1 {
+        font-size: 3rem;
+    }
+    .header-titles p {
+        font-size: 1.5rem;
+    }
+    .logo-links {
+        margin: 1em 3em 0em;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .logo-links{
+        margin: 1em 0em 0em;
+    }
+    .header-container {
+        padding: 5rem 4rem 10rem;
+        max-height: 10rem;
+    }
+}
