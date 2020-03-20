@@ -24,7 +24,7 @@ http.createServer(function (req, res) {
       res.end(html);
     });
 
-  if(pathname === '/master.css'){
+  }else if(pathname === '/master.css'){
     fs.readFile('./css/master.css', function(err, css){
       if(err) throw err;
       res.writeHead(200, {'Content-Type': 'text/css'});
@@ -32,7 +32,7 @@ http.createServer(function (req, res) {
     });
 
   }else if(pathname === '/apply_class'){
-    fs.readFile('./html/apply.html', function(err, html){
+    fs.readFile('./html/form.html', function(err, html){
       if(err) throw error;
       res.writeHeader(200, {'Content-Type' : 'text/html'});
       res.write(html);
@@ -40,10 +40,16 @@ http.createServer(function (req, res) {
     });
 
   }else if(pathname === '/apply_class_process' && req.method=='POST'){
-    collectRequestData(req, result => {
-      console.log(result);
-      res.end('apply confirmed');
+    var body='';
+    request.on('data', function(data){//gives the data to the body which we got from the method post
+      body+=data;
     });
+    request.on('end', function(){//write a new file that has the name as title and file data as description
+    var post = qs.parse(body);
+    // [post.title, post.description, post.author],
+    response.writeHead(302, {Location:`/?id=${result.insertId}`});
+    response.end();
+  });
 
   }else{
     res.writeHead(404);
