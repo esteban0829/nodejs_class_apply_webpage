@@ -13,9 +13,9 @@ var app = http.createServer(function (req, res) {
   var pathname = url.parse(req.url).pathname;
   var querydata = url.parse(req.url).query;
 
-  console.log(`_url : ${_url}`);
-  console.log(`pathanme : ${pathname}`);
-  console.log(`querydata : ${querydata}`);
+  // console.log(`_url : ${_url}`);
+  // console.log(`pathanme : ${pathname}`);
+  // console.log(`querydata : ${querydata}`);
 
   if(pathname === '/'){
     template.main(req,res);
@@ -27,15 +27,21 @@ var app = http.createServer(function (req, res) {
     template.apply_class_process(req,res);
 
   }else if(req.url.match("\.css$")){
-    var cssPath = path.join(__dirname, 'front-end', req.url);
+    var cssPath = path.join(__dirname, 'front-end', _url);
     var fileStream = fs.createReadStream(cssPath, "UTF-8");
     res.writeHead(200, {"Content-Type": "text/css"});
     fileStream.pipe(res);
 
+  }else if(req.url.match("\.javascript$")){
+    var cssPath = path.join(__dirname, 'front-end', _url);
+    var fileStream = fs.createReadStream(javascriptPath, "UTF-8");
+    res.writeHead(200, {"Content-Type": "text/javascript"});
+    fileStream.pipe(res);
+
   }else if(req.url.match("\.jpg$")){
-    var imagePath = path.join(__dirname, 'front-end', req.url);
+    var imagePath = path.join(__dirname, 'front-end', _url);
     var fileStream = fs.createReadStream(imagePath);
-    res.writeHead(200, {"Content-Type": "image/jp g"});
+    res.writeHead(200, {"Content-Type": "image/jpg"});
     fileStream.pipe(res);
 
   }else{
