@@ -15,6 +15,7 @@ var app = http.createServer(function (req, res) {
   // console.log(`_url : ${_url}`);
   // console.log(`pathanme : ${pathname}`);
   // console.log(`querydata : ${querydata}`);
+  console.log(req.connection.remoteAddress);
 
   if(pathname === '/'){
     template.main(req,res);

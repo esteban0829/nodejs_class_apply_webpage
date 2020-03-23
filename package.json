@@ -1,0 +1,28 @@
+{
+  "name": "nodejs_class_apply_webpage",
+  "version": "1.0.0",
+  "description": "web application made with nodeJS",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "ms": "^2.1.2",
+    "mysql": "^2.18.1",
+    "safe-buffer": "^5.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/esteban0829/nodejs_class_apply_webpage.git"
+  },
+  "author": "coding enthusiast",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esteban0829/nodejs_class_apply_webpage/issues"
+  },
+  "homepage": "https://github.com/esteban0829/nodejs_class_apply_webpage#readme"
+}
