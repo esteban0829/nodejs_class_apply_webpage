@@ -9,8 +9,8 @@ request.onload = function() {
   // Begin accessing JSON data here
   // Which means you can access customer_list here
   var data = JSON.parse(this.response) //customer_list data
-  alert(data);
-  console.log(data);
+
+  console.log(data);// display the data
 
   /*
     a json data is a object that currently in this website's data look like this
