@@ -35,7 +35,7 @@ var app = http.createServer(function (req, res) {
     fileStream.pipe(res);
 
   }else if(req.url.match("\.js$")){
-    var cssPath = path.join(__dirname, 'front-end', _url);
+    var javascriptPath = path.join(__dirname, 'front-end', _url);
     var fileStream = fs.createReadStream(javascriptPath, "UTF-8");
     res.writeHead(200, {"Content-Type": "text/javascript"});
     fileStream.pipe(res);
