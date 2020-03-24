@@ -7,6 +7,7 @@
     min-height: 50rem;
 }
 .form-container{
+    font-size: 1.5rem;
     padding: 2rem;
     color: white;
     background-color: #303761;
@@ -15,7 +16,11 @@
     width: 60%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.email-phone-input {
+    margin-top: 1rem;
+}
 .input {
+    margin-bottom:1.5rem;
     height: 1.5rem;
     border-radius: 1rem;
     outline: none;
@@ -25,6 +30,7 @@
     justify-content: space-around;
 }
 #submit-button{
+    font-size: 1.5rem;
     outline: none;
     border: none;
     background-color: white;
@@ -32,4 +38,22 @@
     height: 50px;
     width: 150px;
     margin-top: 2rem;
+}
+@media screen and (max-width: 1200px){
+    .form-container {
+        text-align: center;
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width:1200px){
+    .email-phone-input {
+        display: flex;
+        justify-content: space-between;
+        margin: 0rem 10% 0rem ;
+    }
+    .name-input{
+        display: flex;
+        justify-content: space-between;
+        margin: 0rem 10% 0rem ;
+    }
 }
