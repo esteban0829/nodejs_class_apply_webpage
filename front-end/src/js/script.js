@@ -26,6 +26,7 @@ request.onload = function() {
   // this and just use it.
 
   //when website's are reloaded they fetch the data with the script(line:6)
+
 }
 
 // Send request
