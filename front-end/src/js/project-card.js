@@ -11,13 +11,13 @@ request.onload = function() {
 
     var key = Object.keys(customer);
 
-    for (i=0;i<key.length;i++){
+    for (var i=0;i<key.length;i++){
         const profileCard = document.createRange().createContextualFragment(profileCardHtml);
         const profileHtml = `
         <div class="profile-description">
         <h1>${customer[key[i]].first_name + " " + customer[key[i]].last_name}</h1>
         <p>${customer[key[i]].email}</p>
-        <p>${customer[key[i]].phone}</p>
+        <p>${customer[key[i]].phone_number}</p>
         </div>
         `
         projectContainer.appendChild(profileCard);
