@@ -14,15 +14,24 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all .2s ease-in-out;
     overflow: hidden;
-
+    position: relative;
 }
+.profile-description {
+    padding-top: 0.3rem;
+    width: 100%;
+    position: absolute;
+    bottom: -5.8rem;
+    background-color: #303761;
+    min-height: 8em;
+    color: white;
+    transition: bottom 200ms ease-out;
+}
+
 .profile-card:hover {
     transform: scale(1.1);
 }
-.profile-description {
-    background-color: #303761;
-    min-height: 5em;
-    color: white;
+.profile-card:hover .profile-description{
+    bottom: -3rem;
 }
 
 @media screen and (max-width: 1600px) {
