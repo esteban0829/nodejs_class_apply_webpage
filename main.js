@@ -10,11 +10,11 @@ app.get('/', (req,res) => {
 });
 
 app.get('/apply_class', (req,res) => {
-  template.main(req,res);
+  template.apply(req,res);
 });
 
 app.post('/apply_class_process', (req, res) => {
-  template.apply(req,res);
+  template.apply_class_process(req,res);
 });
 
 app.post('/customer_list', (req,res) => {
