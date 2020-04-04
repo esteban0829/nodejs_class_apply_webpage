@@ -20,5 +20,8 @@ app.post('/customer_list', (req,res) => {
   template.customer_list(req, res);
 });
 
+app.use(function(req, res, next){
+  template.errorPage(req, res);
+});
 
 app.listen(8081);
