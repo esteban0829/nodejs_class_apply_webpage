@@ -29,6 +29,8 @@
     color: white;
     height: 50px;
     width: 150px;
+    outline: none;
+    border: none;
 }
 
 @media screen and (max-width: 1200px){
@@ -60,5 +62,11 @@
     .header-container {
         padding: 5rem 4rem 10rem;
         max-height: 10rem;
+    }
+    .header-titles h1 {
+        font-size: 2rem;
+    }
+    .header-titles p {
+        font-size: 1.5rem;
     }
 }

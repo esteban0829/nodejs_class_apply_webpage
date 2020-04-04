@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon-Base</title>
     <!-- These are normal css links    -->
+    <link rel="stylesheet" href="./src/css/body-styles/hamburger.css">
     <link rel="stylesheet" href="./src/css/global.css">
     <link rel="stylesheet" href="./src/css/navbar.css">
     <link rel="stylesheet" href="./src/css/header.css">
@@ -14,33 +15,38 @@
     <link rel="stylesheet" href="./src/css/body-styles/body.css">
     <link rel="stylesheet" href="./src/css/body-styles/project-card.css">
     <!-- JavaScript for the Front-End-->
-  <script type="text/javascript" src="./src/js/script.js"></script>
+  <!--<script type="text/javascript" src="./src/js/script.js"></script>-->
 </head>
 
 
 <body>
   <!-- Navigation Bar-->
   <nav class="navbar">
-    <a class="brand" href="#">Moon-Base Hotel</a>
+    <a class="brand" href="#">Moon-Base</a>
     <ul class="links">
       <li><a href="#">Stations</a></li>
-      <li class="dropdown">
-        <a href="#">About</a>
-          <div class="dropdown-content">
-            <a>Project</a>
-            <a>Team</a>
-          </div>
-      </li>
+      <li><a href="#">Teams</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
+    <div class="hamburger-icon">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
   </nav>
+  <div class="hamburger-container">
+    <div class="hamburger-links">Stations</div>
+    <div class="hamburger-links">Projects</div>
+    <div class="hamburger-links">Team</div>
+    <div class="hamburger-links">Contact</div>
+  </div>
   <!-- Header -->
   <div class="header-container">
     <div class="header-titles">
-      <h1 class="title">Take A Moon Vacation</h1>
-      <p>Vairity of rooms and stations</p>
+      <h1 class="title">Learn about our Solar System</h1>
+      <p>Variety of satellites and planets</p>
       <div class="button-container">
-        <button type="button" onclick="window.location.href = '/apply_class';">Book In</a></button>
+        <button type="button" onclick="window.location.href = '/apply_class';">Sign Up</a></button>
       </div>
     </div>
   </div>
@@ -57,6 +63,7 @@
   <div class="footer">
 
   </div>
+  <script src="./src/js/hamburger.js"></script>
   <script type="text/javascript" src="./src/js/project-card.js"></script>
 </body>
 </html>
