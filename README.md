@@ -5,7 +5,7 @@
 
 1. Clone repository to your designated location on your machine
   ```sh
-  git clone https://github.com/Carlos460/nodejs_class_apply_webpage.git
+  git clone https://github.com/esteban0829/nodejs_class_apply_webpage.git
   ```
 2. Move to new directory
   ```sh
