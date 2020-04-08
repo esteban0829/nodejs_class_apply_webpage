@@ -1,6 +1,9 @@
 const hamburgerIcon = document.querySelector('.hamburger-icon');
 const hamburgerBars = document.querySelectorAll('.hamburger-bar');
 const hamburgerLinks = document.querySelectorAll('.hamburger-links');
+//jQuery Test
+const footer = $(".footer")
+console.log(footer)
 
 let state = 1;
 
