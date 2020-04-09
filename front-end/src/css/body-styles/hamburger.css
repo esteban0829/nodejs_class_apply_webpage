@@ -43,6 +43,9 @@
     background-color: #5764b1;
     min-height: 1em;
 }
+.hamburger-icon:hover {
+    cursor: pointer;
+}
 @media screen and (max-width: 1200px){
     .hamburger-icon {
         display: block;
