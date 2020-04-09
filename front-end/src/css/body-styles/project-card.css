@@ -1,3 +1,9 @@
+.station h1{
+    text-align: center;
+    color: rgb(24, 24, 24);
+    letter-spacing: 0.2rem;
+    font-size: 3rem;
+}
 .profile-container {
     display: flex;
     flex-wrap: wrap;
@@ -8,8 +14,8 @@
     background-size: 50vh;
     margin-top: 5rem;
     text-align: center;
-    height: 30em;
-    width: 25em;
+    height: 22em;
+    width: 18em;
     border-radius: 1em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: all .2s ease-in-out;
@@ -17,26 +23,19 @@
     position: relative;
 }
 .profile-description {
+    position: absolute;
     padding-top: 0.3rem;
     width: 100%;
-    position: absolute;
     bottom: -5.8rem;
     background-color: #303761;
     min-height: 8em;
     color: white;
     transition: bottom 200ms ease-out;
 }
-
 .profile-card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    cursor: pointer;
 }
-.profile-card:hover .profile-description{
+.profile-card:active .profile-description{
     bottom: -3rem;
-}
-
-@media screen and (max-width: 1600px) {
-    .profile-card {
-        height: 25em;
-        width: 20em;
-    }
 }
