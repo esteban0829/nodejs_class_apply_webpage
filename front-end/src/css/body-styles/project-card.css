@@ -12,7 +12,7 @@
 .profile-card {
     background-image: url("../../img/stars.jpg");
     background-size: 50vh;
-    margin-top: 5rem;
+    margin: 2.5rem 1rem;
     text-align: center;
     height: 22em;
     width: 18em;
