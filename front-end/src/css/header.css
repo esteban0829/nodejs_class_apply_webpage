@@ -14,15 +14,22 @@
     color: white;
 }
 
-.header-titles h4 {
-    opacity: 60%;
+.header-titles h1 {
+    font-size: 3rem;
 }
+
+.header-titles p {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
 .button-container{
     padding-top: 30px;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
+
 .button-container button{
     border: none;
     background-color: #303761;
@@ -32,22 +39,13 @@
     outline: none;
     border: none;
 }
+.button-container button:hover {
+    cursor: pointer;
+}
 
 @media screen and (max-width: 1200px){
     .header-container{
         max-height: 6rem;
-    }
-}
-
-@media screen and (max-width: 1000px){
-    .header-container{
-        margin: 0em 0em 0em;
-    }
-    .header-titles h1 {
-        font-size: 3rem;
-    }
-    .header-titles p {
-        font-size: 1.5rem;
     }
     .logo-links {
         margin: 1em 3em 0em;
@@ -55,7 +53,13 @@
     }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1000px){
+    .header-container{
+        margin: 0em 0em 0em;
+    }
+}
+
+@media screen and (max-width: 850px){
     .logo-links{
         margin: 1em 0em 0em;
     }
@@ -64,9 +68,9 @@
         max-height: 10rem;
     }
     .header-titles h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .header-titles p {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 }
