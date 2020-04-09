@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    font-family: 'Major Mono Display', monospace;
     letter-spacing: 1px;
 }
