@@ -14,6 +14,7 @@ request.onload = function() {
     for (var i=0;i<key.length;i++){
         const profileCard = document.createRange().createContextualFragment(profileCardHtml);
         const profileHtml = `
+        <div class="profile-icon"></div>
         <div class="profile-description">
         <h1>${customer[key[i]].first_name + " " + customer[key[i]].last_name}</h1>
         <p>${customer[key[i]].email}</p>
