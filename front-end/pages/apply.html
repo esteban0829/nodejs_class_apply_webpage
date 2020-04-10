@@ -1,66 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moon-Base</title>
-    <!-- CSS Styling files-->
-    <link rel="stylesheet" href="/src/css/global.css">
-    <link rel="stylesheet" href="/src/css/navbar.css">
-    <link rel="stylesheet" href="/src/css/header.css">
-    <link rel="stylesheet" href="/src/css/footer.css">
-    <!-- CSS Components-->
-    <link rel="stylesheet" href="/src/css/body-styles/form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- These are normal css links    -->
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/navbar.css">
+    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/footer.css">
+    <!-- Styles that are located in the Body-Content Container-->
+    <link rel="stylesheet" href="../src/css/body-styles/form.css">
+    <!-- JavaScript for the Front-End-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-      <!-- Navigation Bar-->
+  <!-- Navigation Bar-->
   <nav class="navbar">
-    <a class="brand" href="/">Moon-Base Hotel</a>
+    <a class="brand" href="../index.html">moon-base</a>
     <ul class="links">
-      <li><a href="#">Plans</a></li>
-      <li class="dropdown">
-        <a href="#">About</a>
-          <div class="dropdown-content">
-            <a>Us</a>
-            <a>Team</a>
-            <a>social media</a>
-          </div>
-      </li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="#">stations</a></li>
+      <li><a href="#">teams</a></li>
+      <li><a href="#">contact</a></li>
     </ul>
+    <div class="hamburger-icon">
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+      <div class="hamburger-bar"></div>
+    </div>
   </nav>
+  <div class="hamburger-container">
+    <div class="hamburger-links">stations</div>
+    <div class="hamburger-links">team</div>
+    <div class="hamburger-links">contact</div>
+  </div>
     <!-- Header -->
     <div class="header-container">
         <div class="form-container">
             <form action="/apply_class_process" method="post">
-                <div class="name-input">
-                    <div class="first-name">
-                      <label for="fname">First Name</label>
-                      <input type="text" class="input" name="first_name" id="fname-input">
-                    </div>
-                    <div class="last-name">
-                      <label for="lname">Last Name</label>
-                      <input type="text" class="input" name="last_name" id="lname-input">
-                    </div>
-                </div>
-                <div class="email-phone-input">
-                    <div class="email">
-                      <label for="email">Email-Adress</label>
-                      <input type="text" class="input" name="email" id="email-input">
-                    </div>
-                    <div class="phone">
-                      <label for="phone">Phone Number</label>
-                      <input type="text" class="input" name="phone_number" id="phone-input">
-                    </div>
-                </div>
-                <div class="submit-button-container">
-                  <input id="submit-button"type="submit" value="Submit">
-                </div>
+              <div class="input-container">
+                <input type="text" class="input" name="first_name" id="fname-input" placeholder="First Name">
+                <input type="text" class="input" name="last_name" id="lname-input" placeholder="Last Name">
+                <input type="text" class="input" name="email" id="email-input" placeholder="Email">
+                <input type="text" class="input" name="phone_number" id="phone-input" placeholder="Phone #">
+              </div>
+              <div class="submit-button-container">
+                <input id="submit-button"type="submit" value="Submit">
+              </div>
             </form>
         </div>
 
     </div>
   <!-- Footer-Containter-->
   <div class="footer"></div>
+  <script src="./src/js/hamburger.js"></script>
 </body>
 </html>

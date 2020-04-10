@@ -11,25 +11,31 @@
     padding: 2rem;
     color: white;
     background-color: #303761;
-    border-radius: 2rem;
-    min-height: 30rem;
-    width: 60%;
+    border-radius: 0.5rem;
+    min-width: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 50rem;
 }
-.email-phone-input {
-    margin-top: 1rem;
+.input-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .input {
-    margin-bottom:1.5rem;
+    width: 20rem;
+    margin: 1rem 0rem 1.5rem;
     height: 1.5rem;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     outline: none;
+    padding: 0.1rem;
+    font-family: Anton ,sans-serif
 }
 .submit-button-container{
     display: flex;
     justify-content: space-around;
 }
 #submit-button{
+    font-family: "Anton",sans-serif;
     font-size: 1.5rem;
     outline: none;
     border: none;
@@ -38,22 +44,5 @@
     height: 50px;
     width: 150px;
     margin-top: 2rem;
-}
-@media screen and (max-width: 1200px){
-    .form-container {
-        text-align: center;
-        flex-wrap: wrap;
-    }
-}
-@media screen and (min-width:1200px){
-    .email-phone-input {
-        display: flex;
-        justify-content: space-between;
-        margin: 0rem 10% 0rem ;
-    }
-    .name-input{
-        display: flex;
-        justify-content: space-between;
-        margin: 0rem 10% 0rem ;
-    }
+    cursor: pointer;
 }
