@@ -41,10 +41,10 @@
         <div class="form-container">
             <form action="/apply_class_process" method="post">
               <div class="input-container">
-                <input type="text" class="input" name="first_name" id="fname-input" placeholder="First Name" required>
-                <input type="text" class="input" name="last_name" id="lname-input" placeholder="Last Name" required>
-                <input type="text" class="input" name="email" id="email-input" placeholder="Email" required>
-                <input type="text" class="input" name="phone_number" id="phone-input" placeholder="Phone #" required>
+                <input type="text" class="input" name="first_name" id="fname-input" placeholder="First Name" pattern="[A-Za-z]{1,32}"  required>
+                <input type="text" class="input" name="last_name" id="lname-input" placeholder="Last Name" pattern="[A-Za-z]{1,32}"  required>
+                <input type="email" class="input" name="email" id="email-input" placeholder="example@example.com" required>
+                <input type="text" class="input" name="phone_number" id="phone-input" placeholder="12312341234" pattern = "\d{10,13}"  required>
               </div>
               <div class="submit-button-container">
                 <input id="submit-button"type="submit" value="Submit">
