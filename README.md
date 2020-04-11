@@ -1,5 +1,14 @@
 # nodejs_class_apply_webpage
+A small collaboration web project
+### Front-End
+- HTML
+- CSS
+- JavaScript
 
+### Back-End 
+- Node.js
+- Express
+- MySQL
 
 ## Get started with this project
 
