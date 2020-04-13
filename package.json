@@ -14,7 +14,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node start main.js"
+    "start": "node main.js"
   },
   "repository": {
     "type": "git",
