@@ -14,7 +14,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "pm2 start main.js --watch"
+    "start": "node start main.js"
   },
   "repository": {
     "type": "git",
