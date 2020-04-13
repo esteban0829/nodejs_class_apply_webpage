@@ -37,13 +37,21 @@
 
 .profile-description {
     position: absolute;
-    padding-top: 0.3rem;
     width: 100%;
-    bottom: -2rem;
-    background-color: #26316e;
+    bottom: -0.5rem;
+    background-color: #2f386b;
     min-height: 8em;
     color: white;
     transition: bottom 200ms ease-out;
+}
+.profile-description > h1 {
+    font-size: 1.5rem;
+    border-bottom: #222a58 solid 0.05rem;
+}
+.profile-description > p {
+    text-align: left;
+    margin-left: 1rem;
+    padding-top: 0.2rem;
 }
 .profile-description > * {
     font-family: Anton ,sans-serif
