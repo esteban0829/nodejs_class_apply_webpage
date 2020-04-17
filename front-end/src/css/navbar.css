@@ -20,9 +20,9 @@
     padding-top: 1rem;
 }
 
-.links li a {
+.links * {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 .hamburger-icon {
