@@ -1,6 +1,6 @@
 .header-container {
     display: flex;
-    padding: 13rem 8rem 26rem;
+    padding: 8rem 8rem 26rem;
     font-size: 2em;
     max-height: 18rem;
     background-image: url("../img/balloon.jpg");
@@ -32,7 +32,7 @@
 
 .button-container button{
     border: none;
-    background-color: #303761;
+    background-color: #04366A;
     color: white;
     height: 50px;
     width: 150px;
@@ -64,13 +64,13 @@
         margin: 1em 0em 0em;
     }
     .header-container {
-        padding: 5rem 4rem 10rem;
-        max-height: 10rem;
+        padding: 2rem 4rem 10rem;
+        height: 10rem;
     }
     .header-titles h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .header-titles p {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
