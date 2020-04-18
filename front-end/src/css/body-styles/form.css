@@ -1,8 +1,7 @@
-.header-container{
+.apply-container{
     padding: 5rem;
     display: flex;
     justify-content: space-around;
-    background-image: url("../../img/mountain.jpg");
     background-size: cover;
     min-height: 50rem;
 }
@@ -10,7 +9,7 @@
     font-size: 1.5rem;
     padding: 2rem;
     color: white;
-    background-color: #303761;
+    background-color: #04366A;
     border-radius: 0.5rem;
     min-width: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -27,7 +26,8 @@
     height: 1.5rem;
     border-radius: 0.5rem;
     outline: none;
-    padding: 0.1rem;
+    padding: 0.9rem;
+    font-size: 1.5rem;
     font-family: Anton ,sans-serif
 }
 .submit-button-container{

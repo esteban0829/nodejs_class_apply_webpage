@@ -16,28 +16,20 @@
     <link rel="stylesheet" href="./src/css/body-styles/body.css">
     <link rel="stylesheet" href="./src/css/body-styles/project-card.css">
     <!-- JavaScript CDN imports-->
+    <script src="https://kit.fontawesome.com/b648a44ce6.js" crossorigin="anonymous"></script>
 </head>
 <!-- This is a test commit-->
 <body>
   <!-- Navigation Bar-->
   <nav class="navbar">
-    <a class="brand" href="#">moon-base</a>
     <ul class="links">
-      <li><a href="#">stations</a></li>
-      <li><a href="#">teams</a></li>
-      <li><a href="#">contact</a></li>
+      <li class="nav-link"><a href="#"><i class="fas fa-moon fa-2x"></i></a></li>
+      <li class="nav-link"><a href="./pages/apply.html"><i class="fas fa-user fa-2x"></i></a></li>
+      <li class="nav-link"><a href="#"><i class="fas fa-comment-alt fa-2x"></i></a></li>
+      <li class="nav-link"><a href="#"><i class="fas fa-search fa-2x"></i></a></li>
     </ul>
-    <div class="hamburger-icon">
-      <div class="hamburger-bar"></div>
-      <div class="hamburger-bar"></div>
-      <div class="hamburger-bar"></div>
-    </div>
   </nav>
-  <div class="hamburger-container">
-    <div class="hamburger-links">stations</div>
-    <div class="hamburger-links">team</div>
-    <div class="hamburger-links">contact</div>
-  </div>
+  <main>
   <!-- Header -->
   <div class="header-container">
     <div class="header-titles">
@@ -49,14 +41,12 @@
     </div>
   </div>
   <!-- Body Container -->
-  <div class="body-container">
     <!-- Profile List -->
     <div class="station"><h1>stations</h1></div>
     <div class="profile-container"></div>
-  </div>
   <!-- Footer-Containter-->
   <div class="footer"></div>
-  <script src="./src/js/hamburger.js"></script>
+</main>
   <script src="./src/js/project-card-create.js"></script>
 </body>
 </html>
