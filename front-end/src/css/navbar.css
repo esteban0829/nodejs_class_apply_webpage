@@ -4,14 +4,27 @@
     width: 5rem;
     height: 100vh;
     background-color: #04366A;
+    z-index: 1;
 }
 .links {
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #04366A;
 }
-
+.lable {
+    display: none;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    padding-top: 1rem;
+    position: absolute;
+    background-color: white;
+    font-family: Anton ,sans-serif;
+    text-align: center;
+    z-index: -1;
+}
 .nav-link {
     display: flex;
     align-items: center;
@@ -20,16 +33,39 @@
     height: 5rem;
     transition: background-color 200ms ease;
 }
-
 .nav-link a * {
     color: white;
 }
-
 .nav-link:hover {
     cursor: pointer;
     background-color: #1B5A9B;
 }
-
+@media only screen and (min-width: 600px) {
+    #nav-link-1:hover + #moon-base {
+        animation: fadeIn 200ms ease-in-out;
+        display: block;
+        top: 18px;
+        right: -140px;
+    }
+    #nav-link-2:hover + #profile {
+        animation: fadeIn 200ms ease-in-out;
+        display: block;
+        top: 100px;
+        right:-140px;
+    }
+    #nav-link-3:hover + #chat-room {
+        animation: fadeIn 200ms ease-in-out;
+        display: block;
+        top: 180px;
+        right: -140px;
+    }
+    #nav-link-4:hover + #search {
+        animation: fadeIn 200ms ease-in-out;
+        display: block;
+        top: 260px;
+        right: -140px;
+    }
+}
 @media only screen and (max-width: 600px) {
     .navbar {
         bottom: 0;
@@ -38,5 +74,18 @@
     }
     .links {
         flex-direction: row;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        right: -108px;
+    }
+    65%{
+        right: -150px;
+    }
+    100% {
+        opacity: 1;
+        right: -138px;
     }
 }
