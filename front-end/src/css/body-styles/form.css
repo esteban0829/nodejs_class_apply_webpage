@@ -10,8 +10,7 @@
     padding: 2rem;
     color: white;
     background-color: #04366A;
-    border-radius: 0.5rem;
-    min-width: 400px;
+    min-width: 300px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width: 50rem;
 }
@@ -21,14 +20,21 @@
     flex-wrap: wrap;
 }
 .input {
-    width: 20rem;
-    margin: 1rem 0rem 1.5rem;
+    width: 15rem;
+    margin: 1rem 2rem 1.5rem;
     height: 1.5rem;
-    border-radius: 0.5rem;
+    background-color: #04366A;
+    border: none;
+    border-bottom: solid white;
+    text-align: center;
+    color: white;
     outline: none;
     padding: 0.9rem;
     font-size: 1.5rem;
     font-family: Anton ,sans-serif;
+}
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.705);
 }
 .submit-button-container{
     display: flex;
@@ -40,9 +46,13 @@
     outline: none;
     border: none;
     background-color: white;
-    color: #303761;
+    color: #04366A;
     height: 50px;
     width: 150px;
     margin-top: 2rem;
     cursor: pointer;
+    transition: box-shadow 300ms ease;
+}
+#submit-button:hover {
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

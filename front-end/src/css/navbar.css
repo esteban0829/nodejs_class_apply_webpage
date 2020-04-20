@@ -4,6 +4,7 @@
     width: 5rem;
     height: 100vh;
     background-color: #04366A;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     z-index: 1;
 }
 .links {
@@ -21,7 +22,6 @@
     padding-top: 1rem;
     position: absolute;
     background-color: white;
-    font-family: Anton ,sans-serif;
     text-align: center;
     z-index: -1;
 }
@@ -46,24 +46,28 @@
         display: block;
         top: 18px;
         right: -140px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
     }
     #nav-link-2:hover + #profile {
         animation: fadeIn 200ms ease-in-out;
         display: block;
         top: 100px;
         right:-140px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
     }
     #nav-link-3:hover + #chat-room {
         animation: fadeIn 200ms ease-in-out;
         display: block;
         top: 180px;
         right: -140px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
     }
     #nav-link-4:hover + #search {
         animation: fadeIn 200ms ease-in-out;
         display: block;
         top: 260px;
         right: -140px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.19);
     }
 }
 @media only screen and (max-width: 600px) {

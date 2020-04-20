@@ -1,13 +1,7 @@
-main {
-    margin-left: 5rem;
-    background-color: F8FAFB;
-    min-height: 50rem;
+.body-container{
+    height: 80rem;
 }
-
 @media only screen and (max-width:600px){
-    main {
-        margin-left: 0rem;
-    }
     .body-container {
         padding: 3rem 2rem 3rem;
     }
