@@ -1,7 +1,7 @@
 .header-container {
-    margin: 0rem 10rem 0rem;
+    margin: 0rem;
     font-size: 2em;
-    width: auto;
+    width: 100%;
     background-image: url("../img/balloon.jpg");
     background-size: cover;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -47,7 +47,6 @@
 }
 @media screen and (max-width: 800px){
     .header-container {
-        margin: 0rem 3rem 0rem;
         height: 18rem;
     }
     .header-container > h1{
@@ -58,7 +57,6 @@
 }
 @media only screen and (min-width:800px){
     .header-container{
-        margin:0rem 5rem 0rem;
         height: 30rem;
     }
     .header-container > h1{
