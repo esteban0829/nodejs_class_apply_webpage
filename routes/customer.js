@@ -1,6 +1,7 @@
-var express = require('express');
-var router = express.Router();
-var db = require('../lib/db');
+const express = require('express');
+const app = express();
+const router = express.Router();
+const db = require('../lib/db');
 
 app.post('/', (req,res) => {
   db.query(`SELECT * FROM customer`, function(err, result){

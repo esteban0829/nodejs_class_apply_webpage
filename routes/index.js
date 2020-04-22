@@ -1,5 +1,7 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const app = express();
+const fs = require('fs');
+const router = express.Router();
 
 
 app.get('/', (req,res) => {
