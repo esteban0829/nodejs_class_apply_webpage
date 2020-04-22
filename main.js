@@ -10,9 +10,8 @@ app.use(session({
 	resave: true,
 	saveUninitialized: true
 }));
-app.use(bodyParser.urlencoded({extended : true}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
 
 app.use(express.static('front-end'));
 
@@ -27,8 +26,7 @@ app.use('/', indexRouter);
 app.use('/apply',applyRouter);
 app.use('/customer_list',customerInfoRouter);
 app.use('/login', loginRouter);
-app.use('/auth',authRouter);
-
+app.use('/auth',authRouter);  
 
 app.use(function(req, res, next){
   res.send('404 NOT FOUND');

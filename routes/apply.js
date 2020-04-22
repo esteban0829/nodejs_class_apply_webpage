@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 const qs = require('querystring');
 const db = require('../lib/db');
-
+const db2 = require('../lib/db2');
 
 router.get('/class', (req,res) => {
   fs.readFile('./front-end/pages/apply.html', function(err, html){
@@ -14,24 +14,16 @@ router.get('/class', (req,res) => {
 });
 
 router.post('/class_process', (req, res) => {
-  var body='';
-  req.on('data', function(data){//gives the data to the body which we got from the method post
-    body+=data;
-  });
-  req.on('end', function(){//write a new file that has the name as title and file data as description
-    var post = qs.parse(body);
-    console.log(post.user_name);
-    console.log(post.password);
-    db.query(`
-      INSERT INTO customer (first_name, last_name, email, phone_number, book_date) VALUES(?,?,?,?,NOW())`,
-      [post.first_name, post.last_name, post.email, post.phone_number],
-      function(err, result){
-      if(err) throw err;
-      res.writeHead(302, {Location:`/`});
-      res.end();
-    });
-  });
+  db.query(`
+    INSERT INTO customer (first_name, last_name, email, phone_number, book_date) VALUES(?,?,?,?,NOW())`,
+    [req.body.first_name, req.body.last_name, req.body.email, req.body.phone_number],(err, result)=>{if(err) throw err;}
+  );
+  db2.query(`
+    INSERT INTO accounts (username, password, email) VALUES(?,?,?)`,
+    [req.body.user_name, req.body.password, req.body.email],(err, result)=>{if(err) throw err;}
+  );
+  res.writeHead(302, {Location:`/`});
+  res.end();
 });
 
 module.exports = router;
-

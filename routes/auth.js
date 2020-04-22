@@ -1,6 +1,8 @@
 const express = require('express');
+const app = express();
 const router = express.Router();
 const db2 = require('../lib/db2');
+
 
 
 router.post('/', function(request, response) {
@@ -18,7 +20,7 @@ router.post('/', function(request, response) {
 			response.end();
 		});
 	} else {
-		response.writeHead(302, {Location:`/`});
+		response.send('Please enter Username and Password!');
 		response.end();
 	}
 });
