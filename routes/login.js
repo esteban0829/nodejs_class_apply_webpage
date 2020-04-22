@@ -4,7 +4,7 @@ const fs = require('fs');
 
 
 router.get('/', (req,res) => {
-  fs.readFile('./front-end/index.html', function(err, html){
+  fs.readFile('./front-end/pages/login.html', function(err, html){
     if(err) throw err;
     res.writeHead(200, {'Content-Type' : 'text/html'});
     res.end(html);

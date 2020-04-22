@@ -1,12 +1,11 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 const fs = require('fs');
 const qs = require('querystring');
-const router = express.Router();
+const db = require('../lib/db');
 
 
-
-app.get('/class', (req,res) => {
+router.get('/class', (req,res) => {
   fs.readFile('./front-end/pages/apply.html', function(err, html){
     if(err) throw err;
     res.writeHead(200, {'Content-Type' : 'text/html'});
@@ -14,7 +13,7 @@ app.get('/class', (req,res) => {
   });
 });
 
-app.post('/class_process', (req, res) => {
+router.post('/class_process', (req, res) => {
   var body='';
   req.on('data', function(data){//gives the data to the body which we got from the method post
     body+=data;

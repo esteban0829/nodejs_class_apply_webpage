@@ -7,11 +7,13 @@ app.use(express.static('front-end'));
 
 var indexRouter = require('./routes/index');
 var applyRouter = require('./routes/apply');
+var loginRouter = require('./routes/login');
 var customerInfoRouter = require('./routes/customer');
 
 app.use('/', indexRouter);
 app.use('/apply',applyRouter);
 app.use('/customer_list',customerInfoRouter);
+app.use('/login', loginRouter);
 
 
 app.use(function(req, res, next){

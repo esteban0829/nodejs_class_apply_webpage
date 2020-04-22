@@ -1,9 +1,8 @@
 const express = require('express');
-const app = express();
 const router = express.Router();
 const db = require('../lib/db');
 
-app.post('/', (req,res) => {
+router.post('/', (req,res) => {
   db.query(`SELECT * FROM customer`, function(err, result){
     if(err) throw err;
     var response = {};
