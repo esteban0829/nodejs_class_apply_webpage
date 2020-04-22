@@ -8,11 +8,11 @@ router.get('/', (req,res) => {
     fs.readFile('./front-end/pages/index.html', function(err, html){
       if(err) throw err;
       res.writeHead(200, {'Content-Type' : 'text/html'});
+      console.log(req.session.username);
       res.end(html);
     });
   } else {
-    res.writeHead(200, {'Content-Type' : 'text/plain'});
-    res.end('Please login to view this page!');
+    res.redirect(301, '/login')
   }
 });
 
