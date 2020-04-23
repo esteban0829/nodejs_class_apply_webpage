@@ -8,37 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- These are normal css links    -->
     <link rel="stylesheet" href="../src/css/global.css">
-    <link rel="stylesheet" href="../src/css/navbar.css">
-    <link rel="stylesheet" href="../src/css/body-styles/body.css">
-    <link rel="stylesheet" href="../src/css/footer.css">
+    <link rel="stylesheet" href="../src/css/components/body.css">
     <!-- Styles that are located in the Body-Content Container-->
-    <link rel="stylesheet" href="../src/css/body-styles/form.css">
+    <link rel="stylesheet" href="../src/css/components/form.css">
     <!-- JavaScript for the Front-End-->
     <!-- Production version -->
     <script src="https://kit.fontawesome.com/b648a44ce6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- Navigation Bar-->
-  <!-- <nav class="navbar">
-    <ul class="links">
-      <li class="nav-link" id="nav-link-1"><a href="/"><i class="fas fa-moon fa-2x"></i></a></li>
-      <div class="lable" id="moon-base">Moon-Base</div>
-      <li class="nav-link" id="nav-link-2"><a href="#"><i class="fas fa-user fa-2x"></i></a></li>
-      <div class="lable" id="profile">Profile</div>
-      <li class="nav-link" id="nav-link-3"><a href="#"><i class="fas fa-comment-alt fa-2x"></i></a></li>
-      <div class="lable" id="chat-room">Chat Room</div>
-      <li class="nav-link" id="nav-link-4"><a href="#"><i class="fas fa-search fa-2x"></i></a></li>
-      <div class="lable" id="search">Search</div>
-    </ul>
-  </nav> -->
     <!-- Header -->
-    <main>
     <div class="apply-container">
         <div class="form-container">
             <form action="/apply/class_process" method="post">
               <div class="input-container">
-                <input type="text" name="user_name" id="user_name" placeholder="username" required>
-                <input type="password" name="password" id="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <input type="text" class="input" name="user_name" id="user_name" placeholder="username" required>
+                <input type="password" class="input" name="password" id="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                 <input type="text" class="input" name="first_name" id="fname-input" placeholder="First Name" pattern="[A-Za-z]{1,32}"  required>
                 <input type="text" class="input" name="last_name" id="lname-input" placeholder="Last Name" pattern="[A-Za-z]{1,32}"  required>
                 <input type="email" class="input" name="email" id="email-input" placeholder="Email" required>
@@ -50,8 +34,5 @@
             </form>
         </div>
     </div>
-  <!-- Footer-Containter-->
-  <div class="footer"></div>
-</main>
 </body>
 </html>
