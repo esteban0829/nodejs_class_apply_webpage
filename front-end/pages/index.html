@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon-Base</title>
-    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- These are normal css links    -->
-    <link rel="stylesheet" href="../src/css/global.css">
-    <link rel="stylesheet" href="../src/css/navbar.css">
-    <link rel="stylesheet" href="../src/css/header.css">
-    <link rel="stylesheet" href="../src/css/global.css">
-    <link rel="stylesheet" href="../src/css/footer.css">
-    <!-- Styles that are located in the Body-Content Container-->
-    <link rel="stylesheet" href="../src/css/body-styles/body.css">
-    <link rel="stylesheet" href="../src/css/body-styles/project-card.css">
-    <!-- JavaScript CDN imports-->
-    <script src="https://kit.fontawesome.com/b648a44ce6.js" crossorigin="anonymous"></script>
-    <script src="../src/js/login.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon-Base</title>
+  <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- These are normal css links    -->
+  <link rel="stylesheet" href="../src/css/global.css">
+  <link rel="stylesheet" href="../src/css/navbar.css">
+  <link rel="stylesheet" href="../src/css/header.css">
+  <link rel="stylesheet" href="../src/css/global.css">
+  <link rel="stylesheet" href="../src/css/footer.css">
+  <!-- Styles that are located in the Body-Content Container-->
+  <link rel="stylesheet" href="../src/css/body-styles/body.css">
+  <link rel="stylesheet" href="../src/css/body-styles/project-card.css">
+  <!-- JavaScript CDN imports-->
+  <script src="https://kit.fontawesome.com/b648a44ce6.js" crossorigin="anonymous"></script>
+  <script src="../src/js/login.js"></script>
+  <script src="../src/js/project-card-create.js"></script>
 </head>
 
 <body>
@@ -26,9 +28,10 @@
     <ul class="links">
       <li class="nav-link" id="nav-link-1"><a href="#"><i class="fas fa-moon fa-2x"></i></a></li>
       <div class="lable" id="moon-base">Moon-Base</div>
-      <li class="nav-link" id="nav-link-2"><a href="/apply/class"><i class="fas fa-user fa-2x"></i></a></li>
+      <li class="nav-link" id="nav-link-2"><a href="#project-cards"><i class="fas fa-user fa-2x"></i></a></li>
       <div class="lable" id="profile">Profile</div>
-      <li class="nav-link" id="nav-link-3"><a href="#"><i class="fas fa-comment-alt fa-2x"></i></a></li>
+      <li class="nav-link" id="nav-link-3"><a href="http://localhost:4001"><i
+            class="fas fa-comment-alt fa-2x"></i></a></li>
       <div class="lable" id="chat-room">Chat Rooms</div>
       <li class="nav-link" id="nav-link-4"><a href="#"><i class="fas fa-search fa-2x"></i></a></li>
       <div class="lable" id="search">Search</div>
@@ -36,24 +39,27 @@
   </nav>
   <!-- Header -->
   <main>
-  <div class="header-container">
-    <h1>Conecting Like Minded People</h1>
-    <div class="header-filter"></div>
-    <div class="button-container">
+    <div class="header-container">
+      <h1>Conecting Like Minded People</h1>
+      <!-- <div class="header-filter"></div> -->
+      <!-- <div class="button-container">
       <button type="button" onclick="window.location.href ='/apply/class';">sign up</a></button>
+    </div> -->
     </div>
-  </div>
 
-  <!-- Body Container -->
-<div class="body-container"></div>
-  <!-- Footer-Containter-->
-  <div class="footer">
-    <h1>Contact</h1>
-    <div class="contact-container">
-      <i class="fab fa-github"><a href="https://github.com/esteban0829"> esteban0829</a></i>
-      <i class="fab fa-github"><a href="https://github.com/Carlos460"> Carlos460</a></i>
+    <!-- Body Container -->
+    <div class="body-container">
+      <div class="profile-container" id="project-cards"></div>
     </div>
-  </div>
-</main>
+    <!-- Footer-Containter-->
+    <div class="footer">
+      <h1>Contact</h1>
+      <div class="contact-container">
+        <i class="fab fa-github"><a href="https://github.com/esteban0829"> esteban0829</a></i>
+        <i class="fab fa-github"><a href="https://github.com/Carlos460"> Carlos460</a></i>
+      </div>
+    </div>
+  </main>
 </body>
+
 </html>
