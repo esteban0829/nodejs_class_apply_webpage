@@ -4,13 +4,13 @@
     letter-spacing: 0.2rem;
     font-size: 3rem;
 }
-.profile-container {
+.project-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     min-height: 50rem;
 }
-.profile-card {
+.project-card {
     background-image: url("../../img/stars.jpg");
     background-size: 50vh;
     display: flex;
@@ -26,7 +26,7 @@
     overflow: hidden;
     position: relative;
 }
-.profile-icon {
+.project-icon {
     margin: 2rem 0rem 0rem;
     height: 10rem;
     width: 10rem;
@@ -36,7 +36,7 @@
     background-color: sandybrown;
 }
 
-.profile-description {
+.project-description {
     position: absolute;
     width: 100%;
     bottom: -0.5rem;
@@ -45,19 +45,19 @@
     color: white;
     transition: bottom 200ms ease-out;
 }
-.profile-description > h1 {
+.project-description > h1 {
     font-size: 1.5rem;
     border-bottom: #222a58 solid 0.05rem;
 }
-.profile-description > p {
+.project-description > p {
     text-align: left;
     margin-left: 1rem;
     padding-top: 0.2rem;
 }
-.profile-description > * {
+.project-description > * {
     font-family: Anton ,sans-serif
 }
 
-.profile-card:hover {
+.project-card:hover {
     cursor: pointer;
 }
